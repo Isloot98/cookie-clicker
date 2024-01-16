@@ -32,15 +32,15 @@ const buyUpgrades = (type) => {
 const getUpgradeCost = (type) => {
   switch (type) {
     case 'oven':
-      return 10;
-    case 'grandma':
       return 100;
-    case 'factory':
+    case 'grandma':
       return 1000;
-    case 'mine':
+    case 'factory':
       return 10000;
-    case 'bank':
+    case 'mine':
       return 100000;
+    case 'bank':
+      return 1000000;
     default:
       return 0;
   }
@@ -112,3 +112,4 @@ document.addEventListener('DOMContentLoaded', function() {
   
   updateCookiesCount(); 
 });
+

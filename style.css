@@ -1,9 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Bangers&display=swap');
+
+
+* {
+  font-family: 'Bangers', system-ui;
+}
+
 body {
   background-color: black;
  
   height: 100vh;
 
 
+}
+
+img {
+  border-radius: 5rem;;
 }
 
 .page-grid {
@@ -57,6 +68,8 @@ body {
     background-image: url('https://i.pinimg.com/474x/e6/62/0e/e6620eb3231931bc6fa6c9f7cc1ea191.jpg');
     background-size: contain;
     background-position: center;
+    border: 0.2rem solid black;
+
   }
 
   .display-bit {
@@ -67,6 +80,7 @@ body {
     background-size: contain;
     background-position: center;
     text-align: center;
+    border: 0.2rem solid black;
 
   }
 
@@ -87,11 +101,24 @@ body {
     display: grid;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 1fr 1fr;
+    border: 0.2rem solid black;
+    grid-gap: 0.1rem;
+    color: white;
+
   }
 
   .power-up {
     display: flex;
     flex-direction: row;  
+}
+
+.box1 {
+  padding: 3rem;
+  border: 0.2rem solid black;
+  border-radius: 0.5rem;
+  background-color: #35637A;
+
+
 }
 
   .box1 > img {
@@ -101,6 +128,38 @@ body {
   .buy-button > button {
     grid-column: 2;
   }
+
+  .buy-button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: #FFD700;
+    border: 0.2rem solid #8B4513;
+    border-radius: 1rem; 
+    padding: 1rem;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #8B4513; 
+    transition: background-color 0.3s, transform 0.2s, color 0.3s, align-self 0.3s;
+  }
+  
+  .buy-button:hover {
+      background-color: #FFEC8B; 
+      transform: scale(1.05);
+      color: #8B4513; 
+      align-self: flex-end; 
+    }
+  
+    .buy-button:active {
+      background-color: #DAA520; 
+      transform: scale(0.95);
+      color: #8B4513; 
+      align-self: flex-end; 
+    }
+  
+  
+  
 
 
 .reset {
@@ -147,5 +206,324 @@ body {
 
 .reset {
   animation: bounceIn 1s ease-out;
+}
+
+.oven {
+
+}
+
+.grandma {
+
+}
+.factory {
+
+}
+
+.mine {
+
+}
+
+.bank {
+
+}
+
+
+#animatedElement {
+  position: absolute;
+  width: 50px;
+  height: 50px;
+  background-color: blue;
+  opacity: 1;
+  transition: margin-top 10s ease-in-out, opacity 5s ease-in-out;
+}
+
+.hidden {
+  display: none;
+}
+
+
+*,*:after,*:before{
+	-webkit-box-sizing: border-box;
+	-moz-box-sizing: border-box;
+	-ms-box-sizing: border-box;
+	box-sizing: border-box;
+}
+body{
+	font-family: arial;
+	font-size: 16px;
+	margin: 0;
+	background: #fff;
+	color: #000;
+}
+
+.snow_wrap{
+	height: 100vh;
+	width: 100%;
+	background:url('../images/pic.jpg');
+	background-size: cover;
+	background-position: center bottom; 
+	overflow: hidden;
+	position: relative;
+}
+
+.snow, .snow1, .snow2, .snow3, .snow4, .snow5, .snow6, .snow7, .snow8,
+.snow9,
+.snow10,
+.snow11,
+.snow12,
+.snow13,
+.snow14,
+.snow15,
+.snow16,
+.snow17,
+.snow18,
+.snow19,
+.snow20,
+.snow21,
+.snow22,
+.snow23,
+.snow24,
+.snow25,
+.snow26,
+.snow27 {
+  position: absolute;
+  top: -50px;
+  bottom: 0;
+  background-image: 
+    radial-gradient(4px 4px at 100px 50px, #fff , transparent), 
+    radial-gradient(6px 6px at 200px 150px, #fff, transparent), 
+    radial-gradient(3px 3px at 300px 250px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 400px 350px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 500px 100px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 50px 200px, #fff 50%, transparent), 
+    radial-gradient(4px 4px at 150px 300px, #fff 50%, transparent), 
+    radial-gradient(6px 6px at 250px 400px, #fff 50%, transparent), 
+    radial-gradient(3px 3px at 350px 500px, #fff 50%, transparent);
+  background-size: 650px 650px;
+  animation: snow 10s linear infinite;
+  content: "";
+}
+
+.snow {
+  left: 85%;
+  top: -30px;
+}
+
+.snow2 {
+  left: 5%;
+  top: -80px;
+}
+
+.snow3 {
+  left: 20%;
+  top: -130px;
+}
+
+.snow4 {
+  left: 35%;
+  top: -180px;
+}
+
+.snow5 {
+  left: 45%;
+  top: -230px;
+}
+
+.snow6 {
+  left: 55%;
+  top: -280px;
+}
+
+.snow7 {
+  left: 70%;
+  top: -330px;
+}
+
+.snow8 {
+  left: 15%;
+  top: -380px;
+}
+
+.snow9 {
+  left: 50%;
+  top: -430px;
+}
+
+.snow10 {
+  left: 65%;
+  top: -480px;
+}
+
+.snow11 {
+  left: 80%;
+  top: -530px;
+}
+
+.snow12 {
+  left: 25%;
+  top: -580px;
+}
+
+.snow13 {
+  left: 70%;
+  top: -630px;
+}
+
+.snow14 {
+  left: 40%;
+  top: -680px;
+}
+
+.snow15 {
+  left: 90%;
+  top: -730px;
+}
+
+.snow16 {
+  left: 60%;
+  top: -780px;
+}
+
+.snow17 {
+  left: 10%;
+  top: -830px;
+}
+
+.snow18 {
+  left: 45%;
+  top: -880px;
+}
+
+.snow19 {
+  left: 85%;
+  top: -930px;
+}
+
+.snow20 {
+  left: 30%;
+  top: -980px;
+}
+
+.snow21 {
+  left: 75%;
+  top: -1030px;
+}
+
+.snow22 {
+  left: 55%;
+  top: -1080px;
+}
+
+.snow23 {
+  left: 5%;
+  top: -1130px;
+}
+
+.snow24 {
+  left: 50%;
+  top: -1180px;
+}
+
+.snow25 {
+  left: 80%;
+  top: -1230px;
+}
+
+.snow26 {
+  left: 35%;
+  top: -1280px;
+}
+
+.snow27 {
+  left: 65%;
+  top: -1330px;
+}
+
+
+
+
+.snow:after, .snow1:after, .snow2:after, .snow3:after, .snow4:after, .snow5:after, .snow6:after, .snow7:after, .snow8:after,
+.snow9:after,
+.snow10:after,
+.snow11:after,
+.snow12:after,
+.snow13:after,
+.snow14:after,
+.snow15:after,
+.snow16:after,
+.snow17:after,
+.snow18:after,
+.snow19:after,
+.snow20:after,
+.snow21:after,
+.snow22:after,
+.snow23:after,
+.snow24:after,
+.snow25:after,
+.snow26:after,
+.snow27:after,
+.snow9:after,
+.snow10:after,
+.snow11:after,
+.snow12:after,
+.snow13:after,
+.snow14:after,
+.snow15:after,
+.snow16:after,
+.snow17:after,
+.snow18:after,
+.snow19:after,
+.snow20:after,
+.snow21:after,
+.snow22:after,
+.snow23:after,
+.snow24:after,
+.snow25:after,
+.snow26:after,
+.snow27:after {
+  margin-left: 10px;
+  opacity: 0.5;
+  filter: blur(2px);
+  animation-duration: 100s;
+  animation-direction: reverse;
+}
+
+.snow:before, .snow1:before, .snow2:before, .snow3:before, .snow4:before, .snow5:before, .snow6:before, .snow7:before, .snow8:before,
+.snow9:before,
+.snow10:before,
+.snow11:before,
+.snow12:before,
+.snow13:before,
+.snow14:before,
+.snow15:before,
+.snow16:before,
+.snow17:before,
+.snow18:before,
+.snow19:before,
+.snow20:before,
+.snow21:before,
+.snow22:before,
+.snow23:before,
+.snow24:before,
+.snow25:before,
+.snow26:before,
+.snow27:before {
+  margin-left: -10px;
+  opacity: 0.7;
+  filter: blur(1px);
+  animation-duration: 10;
+  animation-direction: reverse;
+}
+
+@keyframes snow {
+  to {
+    transform: translateY(70rem);
+  }
+}
+
+
+
+.snow_wrap > img {
+  width: 3rem;
 }
 
