@@ -105,7 +105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
   buyButtons.forEach(button => {
     button.addEventListener('click', function() {
-      const upgradeType = button.parentElement.parentElement.classList[1]; // Assumes the second class is the upgrade type
+      const upgradeType = button.parentElement.parentElement.classList[1]; 
       buyUpgrades(upgradeType);
     });
   });
@@ -113,3 +113,30 @@ document.addEventListener('DOMContentLoaded', function() {
   updateCookiesCount(); 
 });
 
+const modal = document.getElementById("myModal");
+    const openModalBtn = document.getElementById("openModalBtn");
+
+    openModalBtn.addEventListener("click", openModal);
+
+    function openModal() {
+        modal.style.display = "flex"; 
+    }
+
+    window.closeModal = function () {
+        modal.style.display = "none"; 
+    };
+
+   
+
+    document.getElementById("userInputForm").addEventListener("submit", function (event) {
+      event.preventDefault();
+      const userInputValue = document.getElementById("userInput").value;
+  
+      updatePage(userInputValue);
+      closeModal(); 
+  });
+  
+  function updatePage(userInput) {
+      const outputElement = document.getElementById("output");
+      outputElement.textContent = `${userInput}'s Bakery`;
+  }

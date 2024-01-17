@@ -13,13 +13,31 @@
             <div class="counter-display">
             </div>
             <button class="cookie"><img src="https://www.svgrepo.com/show/396073/cookie.svg"/></button>
+            <p id="output">Default Username</p>
+
+
+            <button id="openModalBtn">Change Username</button>
+
+            <div class="modal" id="myModal">
+                <div class="modal-content">
+                    <span class="close-btn" onclick="closeModal()">&times;</span>
+                    <form id="userInputForm">
+                        <label for="userInput">Enter Your Username:</label>
+                        <input type="text" id="userInput" name="userInput" required>
+                        <button type="submit" id="submit">Submit</button>
+                    </form>
+                </div>
+            </div>
 
             <Button class="reset">Reset</Button>
         </div>
 
 <div class="display-bit">
 
-    <h2>Cookies: <span id="cookies-count">0</span></h2>
+   
+        <h1 id="cubed">Cookies: <span id="cookies-count">0</span></h1>
+       
+
 
     <div class="snow_wrap">
         <img src="https://www.svgrepo.com/show/396073/cookie.svg" class="snow"/>
