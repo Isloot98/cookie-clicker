@@ -1,11 +1,21 @@
 let cookiesCount = 0;
-const upgrades = {
+let upgrades = {
   oven: [],
   grandma: [],
   factory: [],
   mine: [],
   bank: [],
 };
+
+
+
+const MyData = localStorage.getItem('MyAppData');
+if (MyData) {
+  const parsedData = JSON.parse(MyData);
+  cookiesCount = parsedData.cookiesCount;
+  upgrades = parsedData.upgrades;  
+};
+
 
 const saveData = () => {
   const dataToSave = {
@@ -14,19 +24,23 @@ const saveData = () => {
   };
 
   const jsonString = JSON.stringify(dataToSave);
-  localStorage.setItem('yourAppData', jsonString);
+  localStorage.setItem('MyAppData', jsonString);
 };
+
 
 
 const updateCookiesCount = () => {
   const countElement = document.getElementById('cookies-count');
   countElement.textContent = cookiesCount;
+  saveData();
 }
 
 
 const updatePowerUpCount = (type) => {
   const powerUpCountElement = document.querySelector(`.${type} #power-up-count`);
   powerUpCountElement.textContent = upgrades[type].length;
+  saveData();
+
 }
 
 const buyUpgrades = (type) => {
@@ -111,7 +125,16 @@ document.addEventListener('DOMContentLoaded', function() {
     
   resetButton.addEventListener('click', function() {
     cookiesCount = 0;
+    upgrades = {
+      oven: [],
+      grandma: [],
+      factory: [],
+      mine: [],
+      bank: [],
+    };
     updateCookiesCount();
+    saveData();
+
   });
 
   const buyButtons = document.querySelectorAll('.buy-button');
