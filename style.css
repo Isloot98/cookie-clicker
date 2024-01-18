@@ -29,7 +29,7 @@ img {
 .cookie {
     width: 40%;
     padding: -5px; 
-    background-color: white;
+    background-color: none;
     border: none;
     border-radius: 500px; 
     cursor: pointer;
