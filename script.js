@@ -7,11 +7,22 @@ const upgrades = {
   bank: [],
 };
 
+const saveData = () => {
+  const dataToSave = {
+    cookiesCount: cookiesCount,
+    upgrades: upgrades,
+  };
+
+  const jsonString = JSON.stringify(dataToSave);
+  localStorage.setItem('yourAppData', jsonString);
+};
+
 
 const updateCookiesCount = () => {
   const countElement = document.getElementById('cookies-count');
   countElement.textContent = cookiesCount;
 }
+
 
 const updatePowerUpCount = (type) => {
   const powerUpCountElement = document.querySelector(`.${type} #power-up-count`);
@@ -24,6 +35,8 @@ const buyUpgrades = (type) => {
     upgrades[type].push(1);
     updateCookiesCount();
     updatePowerUpCount(type);
+    saveData();
+
   } else {
     alert('Not enough cookies to buy this upgrade!');
   }
@@ -140,3 +153,4 @@ const modal = document.getElementById("myModal");
       const outputElement = document.getElementById("output");
       outputElement.textContent = `${userInput}'s Bakery`;
   }
+  
