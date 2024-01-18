@@ -15,6 +15,8 @@ if (MyData) {
   cookiesCount = parsedData.cookiesCount;
   upgrades = parsedData.upgrades;  
   userInput = parsedData.userInput;
+  updatePage(userInput);
+
 };
 
 
@@ -195,4 +197,5 @@ const modal = document.getElementById("myModal");
       const outputElement = document.getElementById('output');
       outputElement.textContent = `${userInput}'s Bakery`;
       saveData();
+      console.log(userInput + " has been updated");
     }
