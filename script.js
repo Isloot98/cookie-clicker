@@ -43,6 +43,12 @@ const updatePowerUpCount = (type) => {
 
 }
 
+const updatePowerUpCountButMakeItWorkWithLocalStorage = () => {
+  Object.keys(upgrades).forEach((type) => {
+  updatePowerUpCount(type);
+})};
+updatePowerUpCountButMakeItWorkWithLocalStorage();
+
 const buyUpgrades = (type) => {
   if (cookiesCount >= getUpgradeCost(type)) {
     cookiesCount -= getUpgradeCost(type);
@@ -121,6 +127,17 @@ document.addEventListener('DOMContentLoaded', function() {
     updateCookiesCount();
   });
 
+  const cookieButtonTwo = document.querySelectorAll('.cookie2');
+  
+  cookieButtonTwo.forEach(cookieButtonTwo => {
+    cookieButtonTwo.addEventListener('click', function() {
+      console.log('yeet');
+      cookiesCount++;
+      updateCookiesCount();
+    });
+  });
+
+
   const resetButton = document.querySelector('.reset');
     
   resetButton.addEventListener('click', function() {
@@ -133,6 +150,7 @@ document.addEventListener('DOMContentLoaded', function() {
       bank: [],
     };
     updateCookiesCount();
+    updatePowerUpCountButMakeItWorkWithLocalStorage();
     saveData();
 
   });

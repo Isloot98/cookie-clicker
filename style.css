@@ -24,9 +24,7 @@ img {
     grid-template-columns: 1fr 1fr 1fr;
 }
 
-.cookie {
-    border: none;
-}
+
 
 .cookie {
     width: 40%;
@@ -40,6 +38,20 @@ img {
     animation: spin 20s linear infinite;
     margin-top: 2rem;
     margin-left: 2rem;
+
+  }
+
+  .cookie2 {
+    border: none;
+    transition: transform 0.2s ease, box-shadow 0.2s ease margin-top 0.2s ease;
+    border-radius: 500px; 
+    cursor: pointer;
+  }
+
+  .cookie2:active {
+    transform: scale(0.9);
+    box-shadow: none;
+    margin-top: 0.5rem
   }
 
   @keyframes spin {
