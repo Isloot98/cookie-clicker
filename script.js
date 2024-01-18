@@ -6,7 +6,7 @@ let upgrades = {
   mine: [],
   bank: [],
 };
-
+let userInput = ''; 
 
 
 const MyData = localStorage.getItem('MyAppData');
@@ -14,6 +14,7 @@ if (MyData) {
   const parsedData = JSON.parse(MyData);
   cookiesCount = parsedData.cookiesCount;
   upgrades = parsedData.upgrades;  
+  userInput = parsedData.userInput;
 };
 
 
@@ -21,6 +22,7 @@ const saveData = () => {
   const dataToSave = {
     cookiesCount: cookiesCount,
     upgrades: upgrades,
+    userInput: userInput,
   };
 
   const jsonString = JSON.stringify(dataToSave);
@@ -182,16 +184,15 @@ const modal = document.getElementById("myModal");
 
    
 
-    document.getElementById("userInputForm").addEventListener("submit", function (event) {
+    document.getElementById('userInputForm').addEventListener('submit', function (event) {
       event.preventDefault();
-      const userInputValue = document.getElementById("userInput").value;
-  
-      updatePage(userInputValue);
-      closeModal(); 
-  });
-  
-  function updatePage(userInput) {
-      const outputElement = document.getElementById("output");
+      userInput = document.getElementById('userInput').value;
+      updatePage(userInput);
+      closeModal();
+    });
+    
+    function updatePage(userInput) {
+      const outputElement = document.getElementById('output');
       outputElement.textContent = `${userInput}'s Bakery`;
-  }
-  
+      saveData();
+    }
