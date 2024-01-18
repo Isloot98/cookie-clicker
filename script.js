@@ -27,7 +27,7 @@ if (MyData) {
   cookiesCount = parsedData.cookiesCount;
   upgrades = parsedData.upgrades;  
   userInput = parsedData.userInput;
-
+  updatePage(userInput);
 };
 
 
