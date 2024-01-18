@@ -8,6 +8,18 @@ let upgrades = {
 };
 let userInput = ''; 
 
+const saveData = () => {
+  const dataToSave = {
+    cookiesCount: cookiesCount,
+    upgrades: upgrades,
+    userInput: userInput,
+  };
+
+  const jsonString = JSON.stringify(dataToSave);
+  localStorage.setItem('MyAppData', jsonString);
+};
+
+
 
 const MyData = localStorage.getItem('MyAppData');
 if (MyData) {
@@ -20,16 +32,6 @@ if (MyData) {
 };
 
 
-const saveData = () => {
-  const dataToSave = {
-    cookiesCount: cookiesCount,
-    upgrades: upgrades,
-    userInput: userInput,
-  };
-
-  const jsonString = JSON.stringify(dataToSave);
-  localStorage.setItem('MyAppData', jsonString);
-};
 
 
 
