@@ -194,7 +194,7 @@ const modal = document.getElementById("myModal");
       closeModal();
     });
     
-    const updatePage = (userInput) => {
+    function updatePage(userInput) {
       const outputElement = document.getElementById('output');
       outputElement.textContent = `${userInput}'s Bakery`;
       saveData();
