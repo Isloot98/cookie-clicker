@@ -26,9 +26,9 @@ if (MyData) {
   const parsedData = JSON.parse(MyData);
   cookiesCount = parsedData.cookiesCount;
   upgrades = parsedData.upgrades;  
-  usernput = parsedData.userInput;
+  userInput = parsedData.userInput;
   updatePage(userInput);
-};I
+};
 
 
 
