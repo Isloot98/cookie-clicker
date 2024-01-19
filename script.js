@@ -26,9 +26,9 @@ if (MyData) {
   const parsedData = JSON.parse(MyData);
   cookiesCount = parsedData.cookiesCount;
   upgrades = parsedData.upgrades;  
-  userInput = parsedData.userInput;
+  usernput = parsedData.userInput;
   updatePage(userInput);
-};
+};I
 
 
 
@@ -194,7 +194,7 @@ const modal = document.getElementById("myModal");
       closeModal();
     });
     
-    function updatePage(userInput) {
+    const updatePage = (userInput) => {
       const outputElement = document.getElementById('output');
       outputElement.textContent = `${userInput}'s Bakery`;
       saveData();
