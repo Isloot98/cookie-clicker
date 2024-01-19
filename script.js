@@ -177,11 +177,11 @@ const modal = document.getElementById("myModal");
 
     openModalBtn.addEventListener("click", openModal);
 
-    const openModal = () => {
+    function openModal() {
         modal.style.display = "flex"; 
     }
 
-    const closeModal = () => {
+    window.closeModal = function () {
         modal.style.display = "none"; 
     };
 
