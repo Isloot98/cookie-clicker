@@ -9,13 +9,13 @@ let upgrades = {
 let userInput = ''; 
 
 const saveData = () => {
-  const dataToSave = {
+  const data = {
     cookiesCount: cookiesCount,
     upgrades: upgrades,
     userInput: userInput,
   };
 
-  const jsonString = JSON.stringify(dataToSave);
+  const jsonString = JSON.stringify(data);
   localStorage.setItem('MyAppData', jsonString);
 };
 
@@ -177,11 +177,11 @@ const modal = document.getElementById("myModal");
 
     openModalBtn.addEventListener("click", openModal);
 
-    function openModal() {
+    const openModal = () => {
         modal.style.display = "flex"; 
     }
 
-    window.closeModal = function () {
+    const closeModal = () => {
         modal.style.display = "none"; 
     };
 
